@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ASPL - Documentation - Functions</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/Logo.png" />
+</head>
+<body>
+  <nav>
+    <a href="/"><button class="dropbutton">ASPL Home</button></a>
+    <div id="tutorial-dropdown" class="dropdown">
+      <a href="tutorial/"><button class="dropbutton">Tutorial</button></a>
+      <div id="tutorial-content" class="drop-content">
+        <a href="tutorial/writing">Getting Started</a>
+        <a href="tutorial/">Writing</a>
+      </div>
+    </div>
+    <div id="documentation-dropdown" class="dropdown">
+      <a href="#"><button class="dropbutton">Documentation</button></a>
+      <div id="documentation-content" class="drop-content">
+        <a href="#">Types</a>
+        <a href="/docs/funcs">Functions</a>
+      </div>
+    </div>
+    <a href="turbowarp/"><button>View it Early!</button></a>
+  </nav>
+  <br><br>
+  <center>
+    <h1>Documentation</h1>
+    <h2>Functions</h2>
+    <p style="font-size: 18px;">Every single function (and their purpose) is listed here. Well, they aren't implemented in yet. These are just the ones planned and their intended functions.</p>
+  </center>
+  <p>In the first column, each function's name and inputs are shown. If it expects an input of a given type, that is also shown with it, as well as the expected output type.</p>
+  <p>In the second column, what the function does is listed.</p>
+  <p>Lastly, in the third column, a couple of notes are given. <code style="color: purple">func</code> means it expects a function object and <code style="color: purple">cont</code> means it expects a container (a <code style="color: purple">str</code> or <code style="color: purple">list</code>)</p>
+  <center>
+  <table cellspacing=0 style="width: 75%">
+    <tr>
+      <th>Name</th>
+      <th>Function / Reports</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">abs</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Absolute value</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">acos</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Inverse cosine</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">ascii</span>(<span style="color: purple">str</span> char) : <span style="color: purple">number</span></code></td>
+      <td>ASCII codeponumber of a character</td>
+      <td>Techically unicode. But that makes people scared, so I instead made it ASCII.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">asin</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Inverse sine</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">atan</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Inverse tangent</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">atan2</span>(<span style="color: purple">number</span> y, <span style="color: purple">number</span> x) : <span style="color: purple">number</span></code></td>
+      <td>Two argument inverse tangent</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">b64de</span>(<span style="color: purple">str</span> b64) : <span style="color: purple">str</span></code></td>
+      <td>Base64 decodes a given text</td>
+      <td>Code already exists for it in the save load sprite, so it can just be borrowed.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">b64en</span>(<span style="color: purple">str</span> txt) : <span style="color: purple">str</span></code></td>
+      <td>Base64 encodes a given text</td>
+      <td>Same as <code style="color: purple">b64de</code>.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">ceil</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Ceiling</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">clamp</span>(<span style="color: purple">cont</span> cntr, <span style="color: purple">number</span> start, <span style="color: purple">number</span> end) : <span style="color: purple">cont</span></code></td>
+      <td>Clamps a given string or list using the start and end boundaries</td>
+      <td>Easier just to have 1 function for both container types, instead of 2 different functions tied to different containers.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">contains</span>(<span style="color: purple">cont</span> cntr, val) : <span style="color: purple">bool</span></code></td>
+      <td>If the given string or list contains the value given in the string or as an element</td>
+      <td>Same as <code style="color: purple">clamp</code>.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">cos</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Cosine</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">cpchar</span>(<span style="color: purple">number</span> cp) : <span style="color: purple">str</span></code></td>
+      <td>ASCII character at the given codeponumber</td>
+      <td>Same as <code style="color: purple">ascii</code>.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">divmod</span>(<span style="color: purple">number</span> x, <span style="color: purple">number</span> y) : <span style="color: purple">list</span></code></td>
+      <td>The list <code>[<span style="color: purple">floor</span>(x <span style="color: magenta">/</span> y), x <span style="color: magenta">%</span> y]</code></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">enum</span>(<span style="color: purple">list</span> lst) : <span style="color: purple">list</span></code></td>
+      <td>A list with the same length as the original list of lists where each sublist is of the form <code>[n,lst[n]]</code>.</td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">error</span>(<span style="color: purple">str</span> type, <span style="color: purple;">str</span> error)</code></td>
+      <td>Raises an error</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">eval</span>(<span style="color: purple">str</span> cd) : any</code></td>
+      <td>Evaluates a given string</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">floor</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Floor</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">hex</span>(<span style="color: purple">number</span> num) : <span style="color: purple">str</span></code></td>
+      <td>Hex code of a number</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">input</span>(<span style="color: purple">str</span> prompt, <span style="color: purple;">bool</span> ask) : <span style="color: purple">str</span></code></td>
+      <td>Ask for user-input</td>
+      <td>The second arg (by default <code style="color: magenta">False</code>) only exists for using legacy Scratch 3 blocks, incase it's easier to copy</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">join</span>(<span style="color: purple">str</span> str1, <span style="color: purple;">str</span> str2) : <span style="color: purple">str</span></code></td>
+      <td>Join 2 input strings</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">len</span>(<span style="color: purple">cont</span> cntr) : <span style="color: purple">number</span></code></td>
+      <td>Length of a string or list</td>
+      <td>Same as <code style="color: purple">clamp</code>.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">ln</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Natural (base-e) logarithm</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">log</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Base-10 logarithm</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">max</span>(<span style="color: purple">number</span> num1, <span style="color: purple">number</span> num2) : <span style="color: purple">number</span></code></td>
+      <td>Maximum</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">min</span>(<span style="color: purple">number</span> num1, <span style="color: purple">number</span> num2) : <span style="color: purple">number</span></code></td>
+      <td>Minimum</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">numeric</span>(val) : <span style="color: purple">bool</span></code></td>
+      <td>If the input is numeric</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">print</span>(<span style="color: purple">str</span> line)</code></td>
+      <td>Print to the console</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">product</span>(<span style="color: purple">list</span> vec) : <span style="color: purple">number</span></code></td>
+      <td>Product of a list</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">rand</span>(<span style="color: purple">number</span> start, <span style="color: purple">number</span> end) : <span style="color: purple">number</span></code></td>
+      <td>Random number between the 2 given values. Only reports an integer if both of the args are integers</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">range</span>(<span style="color: purple">number</span> start, <span style="color: purple">number</span> end) : <span style="color: purple">list</span></code></td>
+      <td>Range of numbers from <code>start</code> to <code>end</code></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">round</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Rounds to the nearest integer</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">sin</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Sine</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">split</span>(<span style="color: purple">str</span> str1, <span style="color: purple">str</span> str2) : <span style="color: purple">list</span></code></td>
+      <td>Split a string by another string</td>
+      <td>Snap! has a similar block... so it'll be a nice challenge to try and recreate the block in Scratch.</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">sqrt</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Square root</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">sum</span>(<span style="color: purple">list</span> vec) : <span style="color: purple">number</span></code></td>
+      <td>Sum of a list</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">tan</span>(<span style="color: purple">number</span> num) : <span style="color: purple">number</span></code></td>
+      <td>Tangent</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">user</span>() : <span style="color: purple">str</span></code></td>
+      <td>Scratch username</td>
+      <td>Only function that takes no inputs</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">zip</span>(<span style="color: purple">list</span> l1, <span style="color: purple;">list</span> l2) : <span style="color: purple">list</span></code></td>
+      <td>The Nth element of the first list before the Nth element of the second list, for every element in the first and second lists.</td>
+      <td>None</td>
+    </tr>
+  </table>
+  <h3>List functions</h3>
+  <p>Only works for named lists (after all, you could just do the report stuff by hand)</p>
+  <table cellspacing=0 style="width: 75%">
+    <tr>
+      <th>Name</th>
+      <th>Function / Reports</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">list</span>.<span style="color: purple">add</span>(val)</code></td>
+      <td>Add an element to a list</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">list</span>.<span style="color: purple">insert</span>(val, <span style="color: purple">number</span> idx)</code></td>
+      <td>Insert an element into a list</td>
+      <td>None</td>
+    </tr>
+  </table>
+  <h3>Libraries</h3>
+  <p>Libraries contain extra functions that can be imported using an <code style="color: magenta;">import</code> statement: <code><span style="color: magenta;">import</span> ...</code></p>
+  <p>If you want to, you can import only specific functions using a <code style="color: magenta;">from import</code> statement: <code><span style="color: magenta;">from</span> ... <span style="color: magenta;">using</span> (...)</code> (The functions to import have to be in brackets, due to techical limitations)</p>
+  <p>If you think a library's name is too long or just not good, you can use a <i>different</i> name with <code style="color: magenta;">named</code>: <code><span style="color: magenta;">import</span> ... <span style="color: magenta;">named</span> ...</code> It is <i>not</i> possible to combine it with a <code style="color: magenta;">from import</code> statement, so you can't import a function using different name</p>
+  <h4>NumASPL</h4>
+  <p>NumASPL is to ASPL as NumPy is to Python. Just like NumPy, I <b>also</b> recommend that you import it with <code><span style="color: magenta;">import</span> numaspl <span style="color: magenta;">named</span> na</code></p>
+  <table cellspacing=0 style="width: 75%">
+    <tr>
+      <th>Name</th>
+      <th>Function / Reports</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">na</span>.<span style="color: purple">add</span>(<span style="color: purple">list</span> l1, <span style="color: purple">list</span> l2) : <span style="color: purple">list</span></code></td>
+      <td>Ponumber-wise sum of two lists</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">na</span>.<span style="color: purple">convolve</span>(<span style="color: purple">list</span> l1, <span style="color: purple">list</span> l2) : <span style="color: purple">list</span></code></td>
+      <td>Convolution of two lists</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">na</span>.<span style="color: purple">matrixinv</span>(<span style="color: purple">list</span> mtrx) : <span style="color: purple">list</span></code></td>
+      <td>Inverse of a matrix</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">na</span>.<span style="color: purple">matrixmul</span>(<span style="color: purple">list</span> mtrx1, <span style="color: purple">list</span> mtrx2) : <span style="color: purple">list</span></code></td>
+      <td>Multiplication of two matricies</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">na</span>.<span style="color: purple">matrixvec</span>(<span style="color: purple">list</span> mtrx, <span style="color: purple">list</span> vec) : <span style="color: purple">list</span></code></td>
+      <td>Matrix-vector multiplication</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code><span style="color: purple">na</span>.<span style="color: purple">mul</span>(<span style="color: purple">list</span> l1, <span style="color: purple">list</span> l2) : <span style="color: purple">list</span></code></td>
+      <td>Ponumber-wise product of two lists</td>
+      <td>None</td>
+    </tr>
+  </table>
+  </center>
+</body>
+</html>
